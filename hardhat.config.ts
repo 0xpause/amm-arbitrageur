@@ -21,6 +21,10 @@ const config: HardhatUserConfig = {
         accountsBalance: '1000000000000000000000000', // 1 mil ether
       },
     },
+    dev: {
+      url: 'http://127.0.0.1:8545/',
+      accounts: [deployer.private],
+    },
     bscTestnet: {
       url: BSC_Tetsnet_RPC,
       chainId: 0x61,

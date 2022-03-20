@@ -1,4 +1,5 @@
 import { BigNumber, BigNumberish, utils } from 'ethers';
+import KEY from "../.secret";
 
 interface Config {
   contractAddr: string;
@@ -10,11 +11,11 @@ interface Config {
   concurrency: number;
 }
 
-const contractAddr = '0xXXXXXXXXXXXXXXXXXXXXXX'; // flash bot contract address
+const contractAddr = '0x6E0137825B06e5E983439E76Fc6b4c5A40359A4b'; // flash bot contract address
 const gasPrice = utils.parseUnits('10', 'gwei');
 const gasLimit = 300000;
 
-const bscScanApiKey = 'XXXXXXXXXXXXXXXX'; // bscscan API key
+const bscScanApiKey = KEY.bscscan_apikey; // bscscan API key
 const bscScanUrl = `https://api.bscscan.com/api?module=stats&action=bnbprice&apikey=${bscScanApiKey}`;
 
 const config: Config = {
